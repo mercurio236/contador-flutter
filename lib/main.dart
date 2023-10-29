@@ -44,28 +44,43 @@ class HomePage extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
-          Text(
-            '0',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-              fontSize: 100,
+          Padding(
+            padding: EdgeInsets.all(32),
+            child: Text(
+              '0',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: 100,
+              ),
             ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
+                style: TextButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    fixedSize: const Size(100, 100),
+                    primary: Colors.black,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24))),
                 onPressed: decrement,
                 child: Text(
                   'Saiu',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 16
-                  ),
+                  style: TextStyle(color: Colors.black, fontSize: 16),
                 ),
               ),
+              const SizedBox(
+                width: 32,
+              ),
               TextButton(
+                style: TextButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    fixedSize: const Size(100, 100),
+                    primary: Colors.black,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24))),
                 onPressed: increment,
                 child: Text(
                   'Entrou',
